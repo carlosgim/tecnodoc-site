@@ -1,10 +1,10 @@
 # TecnoDoc · sitio web
 
-Sitio estático de **TecnoDoc — Laboratorio de Electrónica** (reparación de notebooks, celulares, TV y otros dispositivos en Itaembé Guazú, Posadas, Misiones). Armado tomando como modelo el sitio de AgroDoc (`agrodoc-site`).
+Sitio estático de **TecnoDoc — Laboratorio de Electrónica** (reparación de notebooks, celulares y TV, y rescate de datos, en Itaembé Guazú, Posadas, Misiones). Armado tomando como modelo el sitio de AgroDoc (`agrodoc-site`).
 
-- `index.html` — página única: servicios, mantenimiento preventivo, cómo trabajamos, consejos y contacto (WhatsApp 3765 11-2222). El correo no se publica por decisión del dueño.
+- `index.html` — página única: servicios (notebooks, celulares, TV y rescate de datos), diagnóstico gratuito, mantenimiento preventivo, cómo trabajamos, consejos y contacto (WhatsApp 3765 11-2222). El correo no se publica por decisión del dueño.
 - `assets/css/styles.css` — estilos con la paleta del logo (negro carbón `#1A1B1A`, rojo `#C0302B`, blanco/gris `#C9CBCA`) y tipografía Montserrat (Google Fonts).
-- `assets/img/` — logo original (`logo-tecnodoc.png`, copia de `IA TecnoDoc/assets/`), versiones livianas para la web (`logo-160`, `logo-400`, `logo-800` en PNG/WebP), favicon, ícono para iPhone e imagen para compartir (`og-image.jpg`, 1200×630).
+- `assets/img/` — logo con el texto inferior "NOTEBOOKS · TV · CELULARES" (`logo-tecnodoc.png`, versión general hecha el 2026-11-02 a partir del original de `IA TecnoDoc/assets/`, que decía "Reparación de notebooks" y no se modificó; copia en `09-MKT-Marketing-y-marca/Identidad-de-marca/logo-tecnodoc-general.png`), versiones livianas para la web (`logo-160`, `logo-400`, `logo-800` en PNG/WebP), favicon, ícono para iPhone e imagen para compartir (`og-image.jpg`, 1200×630).
 - `CNAME` — `www.tecnodoc.com.ar` (dominio que figura en los documentos del laboratorio y en las piezas de branding).
 
 Se publicaría con **GitHub Pages** desde la rama `main` (carpeta raíz), igual que AgroDoc. No requiere compilación: se edita el HTML y se hace push. **Todavía no está publicado.**
@@ -23,12 +23,12 @@ Buscar `[PENDIENTE` en `index.html` para encontrar los marcadores visibles (se m
 2. `[PENDIENTE: dirección exacta]` — en la sección Contacto (hoy solo dice el barrio). Si se agrega, actualizar también `streetAddress` en el JSON-LD del `<head>` y el mapa.
 3. `[PENDIENTE: opiniones de clientes]` — sección no incluida (hay un comentario HTML en su lugar). Sumarla solo con comentarios reales y con autorización de la persona para publicar su nombre.
 4. `[PENDIENTE: garantía]` — el proceso interno prevé emitir garantía en la entrega, pero no hay términos ni plazos definidos; el sitio no la menciona.
-5. `[PENDIENTE: diagnóstico gratuito / precios]` — el plan de negocio menciona "diagnóstico gratuito" como ventaja, pero no está confirmado; el sitio no habla de precios ni de costo del diagnóstico.
-6. `[PENDIENTE: rescate de datos y venta de accesorios]` — no se incluyeron como servicios: el rescate de datos no aparece en las fuentes y la venta de accesorios solo figura en un banner de LinkedIn. Confirmar si se ofrecen.
+5. `[PENDIENTE: condiciones del diagnóstico gratuito]` — confirmado por el dueño (2026-11-02) y publicado. Definir si tiene condiciones (por ejemplo, tipo de equipo o plazo) y, si las hay, aclararlas en el sitio. El sitio sigue sin hablar de precios.
+6. `[PENDIENTE: venta de accesorios]` — solo figura en un banner de LinkedIn; confirmar si se ofrece. (El rescate de datos ya está publicado como servicio, confirmado el 2026-11-02.)
 7. `[PENDIENTE: foto real del laboratorio]` — AgroDoc usa una foto del frente del taller; acá el hero muestra el logo. Las imágenes de `Estrategia y Branding` son generadas por IA (tienen la marca de agua de Gemini), por eso no se usaron como foto.
 8. `[PENDIENTE: redes sociales]` — Instagram/Facebook/LinkedIn, si existen, para sumar al pie.
 9. `[PENDIENTE: confirmar WhatsApp]` — ver arriba.
-10. `[PENDIENTE: logo]` — el sello dice "Reparación de notebooks", pero el sitio presenta también celulares, TV y otros dispositivos. Evaluar una versión del logo con un texto más general.
+10. ~~Logo~~ — resuelto: el sitio usa la versión "NOTEBOOKS · TV · CELULARES". Los documentos de `IA TecnoDoc` siguen con el logo original; cambiarlo allá si se quiere unificar.
 11. `[PENDIENTE: DNS del dominio]` — `www.tecnodoc.com.ar` tiene que apuntar a GitHub Pages (ver pasos).
 
 ## Pasos para publicar (no ejecutados)
