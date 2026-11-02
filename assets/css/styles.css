@@ -1,0 +1,163 @@
+/* TecnoDoc — paleta tomada del logo (negro carbón, blanco y rojo) y de las piezas de "Estrategia y Branding".
+   Tipografía: Montserrat (Google Fonts), sans geométrica pesada similar a la del logotipo. */
+:root {
+  --rojo: #C0302B;        /* rojo de "DOC" y de la notebook del isotipo */
+  --rojo-osc: #9E2622;
+  --negro: #1A1B1A;       /* fondo del sello circular */
+  --carbon: #2A2C2B;
+  --grafito: #3A3D3C;
+  --gris: #C9CBCA;        /* blanco "metalizado" del texto del sello */
+  --humo: #F3F3F2;
+  --blanco: #FFFFFF;
+  --texto-suave: #4A4E4D;
+  --titulos: "Montserrat", "Segoe UI", Arial, sans-serif;
+  --texto: "Montserrat", "Segoe UI", Arial, sans-serif;
+  --radio: 14px;
+  --sombra: 0 10px 30px rgba(0, 0, 0, .10);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { margin: 0; font-family: var(--texto); font-size: 16.5px; line-height: 1.65; color: var(--carbon); background: var(--blanco); }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+a:focus-visible, .btn:focus-visible, .menu__btn:focus-visible { outline: 3px solid var(--rojo); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--titulos); line-height: 1.1; margin: 0 0 .45em; color: var(--negro); }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.5rem); font-weight: 900; text-transform: uppercase; letter-spacing: .01em; }
+h3 { font-size: 1.2rem; font-weight: 800; }
+.wrap { width: min(1160px, 92%); margin: 0 auto; }
+.ico { width: 1.2em; height: 1.2em; fill: currentColor; flex: none; }
+.salto { position: absolute; left: -9999px; top: 0; background: var(--rojo); color: var(--blanco); padding: .6em 1em; z-index: 50; }
+.salto:focus { left: 1rem; top: 1rem; }
+
+/* Marcadores de datos pendientes: visibles a propósito, para no olvidarlos antes de publicar */
+.pendiente { background: #FFF3B0; color: #5A4A00; padding: 0 .3em; border-radius: 4px; font-weight: 700; font-size: .92em; }
+
+/* Botones */
+.btn { display: inline-flex; align-items: center; gap: .55em; padding: .85em 1.5em; border-radius: 999px; font-family: var(--titulos);
+  font-weight: 800; font-size: 1rem; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; transition: transform .15s, background .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn--rojo { background: var(--rojo); color: var(--blanco); }
+.btn--rojo:hover { background: var(--rojo-osc); }
+.btn--linea { border: 2px solid var(--gris); color: var(--blanco); }
+.btn--linea:hover { border-color: var(--blanco); }
+.btn--blanco { background: var(--blanco); color: var(--rojo-osc); }
+.btn--sm { padding: .5em 1.1em; font-size: .9rem; }
+
+.etiqueta { font-family: var(--titulos); font-weight: 800; text-transform: uppercase; letter-spacing: .16em; font-size: .85rem; color: var(--gris); margin: 0 0 .6em; }
+.etiqueta--oscura { color: var(--rojo); }
+.intro { max-width: 700px; font-size: 1.05rem; color: var(--texto-suave); margin: 0 0 2.2rem; }
+.intro--clara { color: var(--gris); }
+
+/* Barra superior */
+.topbar { position: sticky; top: 0; z-index: 20; background: var(--negro); border-bottom: 4px solid var(--rojo); }
+.topbar__in { display: flex; align-items: center; justify-content: space-between; min-height: 72px; }
+.topbar__logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--blanco); }
+.topbar__logo img { width: 56px; height: 56px; }
+.topbar__marca { font-family: var(--titulos); font-weight: 900; font-size: 1.35rem; letter-spacing: .06em; }
+.topbar__marca span { color: var(--rojo); }
+.menu { display: flex; align-items: center; gap: 1.5rem; }
+.menu a:not(.btn) { color: var(--blanco); text-decoration: none; font-family: var(--titulos); font-weight: 700; font-size: .92rem;
+  text-transform: uppercase; letter-spacing: .06em; opacity: .9; }
+.menu a:not(.btn):hover { opacity: 1; color: var(--gris); text-decoration: underline; text-decoration-color: var(--rojo); text-underline-offset: 6px; }
+.menu__toggle, .menu__btn { display: none; }
+
+/* Hero: fondo carbón con trama sutil de "pistas" de circuito */
+.hero { position: relative; color: var(--blanco); overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(0deg, rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 48px 48px,
+    radial-gradient(circle at 75% 45%, var(--grafito) 0, var(--negro) 62%); }
+.hero__in { display: grid; grid-template-columns: 1.15fr 1fr; gap: 2rem; align-items: center; padding: 4.5rem 0 5rem; }
+.hero h1 { color: var(--blanco); font-size: clamp(2.3rem, 5.2vw, 3.9rem); font-weight: 900; text-transform: uppercase; }
+.hero h1 span { color: var(--rojo); }
+.hero__bajada { font-size: 1.12rem; color: #E4E5E4; max-width: 34em; }
+.hero__bajada strong { color: var(--blanco); }
+.hero__acciones { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.8rem 0 1.4rem; }
+.hero__lugar { display: flex; align-items: center; gap: .4em; color: var(--gris); font-weight: 600; font-size: 1rem; letter-spacing: .03em; margin: 0; }
+.hero__lugar .ico { color: var(--rojo); }
+.hero__img { display: grid; place-items: center; }
+.hero__img img { width: min(440px, 100%); filter: drop-shadow(0 18px 40px rgba(0, 0, 0, .55)); }
+
+/* Secciones */
+.seccion { padding: 5rem 0; }
+.seccion--clara { background: var(--humo); }
+.seccion--oscura { background: var(--negro); color: var(--blanco); }
+.seccion--oscura h2 { color: var(--blanco); }
+
+.grilla { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
+.tarjeta { background: var(--blanco); border: 1px solid #E2E3E2; border-radius: var(--radio); padding: 1.7rem; box-shadow: var(--sombra);
+  border-top: 5px solid var(--rojo); transition: transform .15s; }
+.tarjeta:hover { transform: translateY(-4px); }
+.tarjeta__cab { display: flex; align-items: center; gap: 1rem; margin-bottom: .9rem; }
+.tarjeta__cab h3 { margin: 0; }
+.tarjeta__ico { width: 60px; height: 60px; border-radius: 50%; background: var(--negro); color: var(--blanco); display: grid; place-items: center; flex: none; }
+.tarjeta__ico svg { width: 34px; height: 34px; }
+.tarjeta ul { margin: 0; padding-left: 1.15rem; color: var(--texto-suave); }
+.tarjeta li { margin-bottom: .3rem; }
+.tarjeta li::marker { color: var(--rojo); }
+.tarjeta p { margin: 0; color: var(--texto-suave); }
+
+.pasos { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+.pasos li { background: var(--blanco); border-radius: var(--radio); padding: 1.5rem 1.3rem; box-shadow: var(--sombra); }
+.pasos span { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--rojo); color: var(--blanco);
+  font-family: var(--titulos); font-weight: 900; font-size: 1.3rem; margin-bottom: .8rem; }
+.pasos h3 { font-size: 1.08rem; }
+.pasos p { margin: 0; font-size: .94rem; color: var(--texto-suave); }
+
+.banda { background: var(--rojo); color: var(--blanco); padding: 3rem 0; }
+.banda__in { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.banda h2 { color: var(--blanco); margin-bottom: .25em; }
+.banda p { margin: 0; max-width: 46em; font-size: 1.05rem; }
+
+.grilla--consejos { grid-template-columns: repeat(4, 1fr); }
+.consejo { border-left: 5px solid var(--rojo); padding: .3rem 0 .3rem 1.2rem; }
+.consejo p { margin: 0; color: var(--texto-suave); }
+
+.contacto { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; align-items: center; }
+.contacto__wa { display: inline-flex; align-items: center; gap: .4em; font-family: var(--titulos); font-weight: 900; font-size: clamp(1.7rem, 4.2vw, 2.5rem);
+  color: var(--blanco); text-decoration: none; background: var(--rojo); padding: .25em .8em; border-radius: 999px; }
+.contacto__wa:hover { background: var(--rojo-osc); }
+.contacto__datos { list-style: none; padding: 0; margin: 1.6rem 0 0; color: var(--gris); font-size: 1.02rem; }
+.contacto__datos li { display: flex; align-items: center; gap: .55em; margin-bottom: .55rem; }
+.contacto__datos .ico { color: var(--rojo); }
+.contacto__datos a { color: var(--blanco); }
+.mapa { border-radius: var(--radio); overflow: hidden; border: 4px solid var(--grafito); aspect-ratio: 4 / 3; }
+.mapa iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+.pie { background: #111211; color: var(--gris); padding: 2rem 0; font-size: .9rem; }
+.pie__in { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.pie__in img { width: 64px; height: 64px; }
+.pie p { margin: 0; }
+
+.wa-flotante { position: fixed; right: 20px; bottom: 20px; z-index: 30; width: 60px; height: 60px; border-radius: 50%; background: #25D366;
+  display: grid; place-items: center; box-shadow: 0 6px 18px rgba(0, 0, 0, .25); transition: transform .15s; }
+.wa-flotante:hover { transform: scale(1.08); }
+.wa-flotante svg { width: 32px; height: 32px; fill: var(--blanco); }
+
+/* Responsive */
+@media (max-width: 980px) {
+  .hero__in { grid-template-columns: 1fr; padding: 3rem 0 4rem; }
+  .hero__img { order: -1; }
+  .hero__img img { width: min(260px, 70%); }
+  .pasos { grid-template-columns: repeat(2, 1fr); }
+  .grilla--consejos { grid-template-columns: repeat(2, 1fr); }
+  .contacto { grid-template-columns: 1fr; }
+  .banda__in { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 860px) {
+  .topbar__in { position: relative; }
+  .menu__toggle { display: block; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; margin: 0; opacity: 0; cursor: pointer; z-index: 2; }
+  .menu__btn { display: grid; gap: 5px; cursor: pointer; padding: 8px; }
+  .menu__btn span { display: block; width: 26px; height: 3px; background: var(--blanco); border-radius: 2px; }
+  .menu { display: none; position: absolute; top: 76px; left: 0; right: 0; flex-direction: column; gap: 1.1rem; padding: 1.5rem;
+    background: var(--negro); border-bottom: 4px solid var(--rojo); }
+  .menu__toggle:checked ~ .menu { display: flex; }
+  .menu__toggle:focus-visible ~ .menu__btn { outline: 3px solid var(--rojo); outline-offset: 3px; }
+}
+@media (max-width: 640px) {
+  .grilla, .pasos, .grilla--consejos { grid-template-columns: 1fr; }
+  .seccion { padding: 3.5rem 0; }
+  .topbar__logo img { width: 46px; height: 46px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .tarjeta, .wa-flotante { transition: none; } }
