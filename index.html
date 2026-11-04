@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TecnoDoc · Laboratorio de electrónica en Posadas, Misiones · Reparación de notebooks, celulares y TV</title>
-  <meta name="description" content="Laboratorio de electrónica en Itaembé Guazú, Posadas, Misiones. Reparación de notebooks, celulares y TV, y rescate de datos. Diagnóstico gratuito y documentado, reparación a nivel componente y presupuesto antes de intervenir.">
+  <meta name="description" content="Laboratorio de electrónica en Itaembé Guazú, Posadas, Misiones. Reparación de notebooks, celulares y TV, y rescate de datos. Diagnóstico gratuito y documentado, reparación a nivel componente, presupuesto antes de intervenir y 3 meses de garantía.">
   <meta name="theme-color" content="#1A1B1A">
   <link rel="canonical" href="https://www.tecnodoc.com.ar/">
   <link rel="icon" href="assets/img/favicon-48.png" type="image/png" sizes="48x48">
@@ -64,8 +64,10 @@
     <label for="menu" class="menu__btn" aria-hidden="true"><span></span><span></span><span></span></label>
     <nav class="menu" aria-label="Secciones">
       <a href="#servicios">Servicios</a>
+      <!-- <a href="#usados">Usados</a>  (oculto hasta cargar equipos reales) -->
       <a href="#como-trabajamos">Cómo trabajamos</a>
       <a href="#consejos">Consejos</a>
+      <!-- <a href="#compromiso-social">Compromiso social</a>  (oculto, en revisión) -->
       <a href="#contacto">Contacto</a>
       <a class="btn btn--sm btn--rojo" href="https://wa.me/5493765112222?text=Hola%20TecnoDoc%2C%20quiero%20consultar%20por%20un%20equipo." target="_blank" rel="noopener">WhatsApp</a>
     </nav>
@@ -78,7 +80,7 @@
       <div class="hero__texto">
         <p class="etiqueta">Laboratorio de Electrónica · Posadas, Misiones</p>
         <h1>¡Recuperamos tu <span>equipo!</span></h1>
-        <p class="hero__bajada">Reparación y mantenimiento preventivo de <strong>notebooks, celulares y TV</strong>, y rescate de datos. <strong>Diagnóstico gratuito</strong>, ordenado y documentado paso a paso, y <strong>presupuesto antes de intervenir</strong>.</p>
+        <p class="hero__bajada">Reparación y mantenimiento preventivo de <strong>notebooks, celulares y TV</strong>, y rescate de datos. <strong>Diagnóstico gratuito</strong>, ordenado y documentado paso a paso, <strong>presupuesto antes de intervenir</strong> y <strong>3 meses de garantía</strong> en todos nuestros trabajos.</p>
         <div class="hero__acciones">
           <a class="btn btn--rojo" href="https://wa.me/5493765112222?text=Hola%20TecnoDoc%2C%20quiero%20consultar%20por%20un%20equipo." target="_blank" rel="noopener">
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
@@ -169,6 +171,21 @@
     </div>
   </section>
 
+  <!-- Equipos usados: el contenido se carga desde assets/data/equipos-usados.js (ver instrucciones en ese archivo).
+       OCULTA (atributo hidden + menú y scripts comentados) hasta cargar equipos reales. Para mostrarla, revertir esas 3 cosas. -->
+  <section class="seccion" id="usados" hidden>
+    <div class="wrap">
+      <p class="etiqueta etiqueta--oscura">Equipos usados</p>
+      <h2>Usados revisados en el laboratorio</h2>
+      <p class="intro">Notebooks, celulares y televisores usados que pasaron por nuestro banco de pruebas. Cada publicación detalla sus características, su condición y el precio final.</p>
+      <div class="filtros" id="usados-filtros" role="group" aria-label="Filtrar por tipo de equipo" hidden></div>
+      <div class="usados" id="usados-grilla" aria-live="polite">
+        <noscript><p class="usados__vacio">Para ver los equipos disponibles, activá JavaScript o escribinos por WhatsApp al 3765 11-2222.</p></noscript>
+      </div>
+      <p class="usados__nota">Precios en pesos argentinos, sujetos a disponibilidad. Consultanos por WhatsApp para coordinar.<!-- [PENDIENTE: condiciones de venta de usados (garantía, medios de pago, prueba del equipo)] --></p>
+    </div>
+  </section>
+
   <section class="seccion seccion--clara" id="como-trabajamos">
     <div class="wrap">
       <p class="etiqueta etiqueta--oscura">Cómo trabajamos</p>
@@ -182,8 +199,15 @@
         <li><span>5</span><h3>Reparación</h3><p>Reparamos a nivel componente, módulo o software, según lo que haga falta.</p></li>
         <li><span>6</span><h3>Control de calidad</h3><p>Pruebas de estrés y checklist completo: audio, cámara, puertos, Wi-Fi, teclado y carga de batería.</p></li>
         <li><span>7</span><h3>Ensamblado</h3><p>Cerramos el equipo con todos sus tornillos y blindajes en su lugar, y lo limpiamos por fuera.</p></li>
-        <li><span>8</span><h3>Entrega con informe</h3><p>Te mostramos el equipo funcionando y te entregamos un informe, en palabras simples, de lo que se hizo.</p></li>
+        <li><span>8</span><h3>Entrega con informe y garantía</h3><p>Te mostramos el equipo funcionando y te entregamos un informe, en palabras simples, de lo que se hizo. Con 3 meses de garantía.</p></li>
       </ol>
+      <div class="garantia">
+        <svg class="garantia__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3Z"/></svg>
+        <div>
+          <h3>3 meses de garantía</h3>
+          <p>Todos nuestros trabajos tienen <strong>3 meses de garantía desde la entrega</strong>. No cubre la batería ni fallas ajenas al trabajo realizado (golpes, líquidos, sobretensiones o intervención de terceros).</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -210,6 +234,32 @@
         <article class="consejo">
           <h3>Tus datos</h3>
           <p>Hacé copias de seguridad seguido, en un disco externo o en la nube. Ante cualquier falla, tus fotos y archivos importantes quedan a salvo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compromiso social: OCULTA (atributo hidden + link del menú comentado) hasta que el dueño la retome. Para mostrarla, revertir esas 2 cosas. -->
+  <section class="seccion seccion--clara" id="compromiso-social" hidden>
+    <div class="wrap">
+      <p class="etiqueta etiqueta--oscura">Compromiso social</p>
+      <h2>Notebooks que vuelven a ayudar</h2>
+      <p class="intro">Una computadora abre puertas: para estudiar, buscar trabajo, hacer un trámite o estar cerca de los tuyos. Por eso <strong>restauramos notebooks y las regalamos a personas y familias con pocos recursos</strong>.</p>
+      <ol class="pasos pasos--tres">
+        <li><span>1</span><h3>Recuperamos</h3><p>Notebooks que ya nadie usa y que todavía tienen mucho para dar.</p></li>
+        <li><span>2</span><h3>Restauramos</h3><p>Las reparamos y les hacemos mantenimiento en el laboratorio. Borramos de forma segura cualquier dato anterior, instalamos un sistema limpio y las probamos con el mismo control de calidad que un equipo de cliente.</p></li>
+        <li><span>3</span><h3>Regalamos</h3><p>Las entregamos sin costo a quien más las necesita, listas para usar.</p></li>
+      </ol>
+      <div class="social">
+        <article class="social__caja">
+          <h3>¿Tenés una notebook que ya no usás?</h3>
+          <p>Donala y dale una segunda vida en manos de alguien que la necesita. Antes de restaurarla borramos todos tus datos de forma segura.</p>
+          <a class="btn btn--rojo" href="https://wa.me/5493765112222?text=Hola%20TecnoDoc%2C%20quiero%20donar%20una%20notebook." target="_blank" rel="noopener">Quiero donar una notebook</a>
+        </article>
+        <article class="social__caja">
+          <h3>¿Conocés a alguien que la necesite?</h3>
+          <p>Escribinos y contanos su situación. Las entregas dependen de los equipos que tengamos disponibles en cada momento.</p>
+          <a class="btn btn--negro" href="https://wa.me/5493765112222?text=Hola%20TecnoDoc%2C%20conozco%20a%20alguien%20que%20necesita%20una%20notebook." target="_blank" rel="noopener">Contanos su historia</a>
         </article>
       </div>
     </div>
@@ -254,5 +304,9 @@
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
 </a>
 
+<!-- Usados (oculto):
+<script src="assets/data/equipos-usados.js"></script>
+<script src="assets/js/usados.js"></script>
+-->
 </body>
 </html>

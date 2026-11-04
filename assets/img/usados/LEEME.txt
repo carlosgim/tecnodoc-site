@@ -1,0 +1,1 @@
+Fotos de los equipos usados en venta. Ver instrucciones en assets/data/equipos-usados.js
